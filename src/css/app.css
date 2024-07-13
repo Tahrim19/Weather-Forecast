@@ -15,7 +15,7 @@ body{
     #55d0ff ,	
     #00acdf ,	
     #0080bf);  */
-    background: url('sky.png') ;
+    background: url('../images/sky.png') ;
 }
 
 /* form{
@@ -36,6 +36,7 @@ form input{
     width: 200px;
     margin: 20px;
     padding: 8px;
+    outline: none;
 
 }
 
@@ -46,14 +47,27 @@ button{
     padding: 10px;
 }
 
+
+
+button:hover{
+    /* background-color: #78D7F2; */
+    background-color: #CAEDF4; 
+    transition: 0.3s ease-in-out;
+
+}
+
 .data{
-    background-color: yellow;
+    /* background-color: yellow; */
     margin: 20px;
 
 }
 
+.data .column p{
+    display: flex;
+    flex-direction: column;
+}
+
 .container{
-    /* background-color: fuchsia; */
     border-radius: 12px;
     height: 350px;
     width: 500px;

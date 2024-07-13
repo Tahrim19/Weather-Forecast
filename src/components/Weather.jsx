@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import WeatherDetail from './WeatherDetail';
 
 export default function Weather() {
     const [city , setCity] = useState('');
@@ -44,15 +45,8 @@ export default function Weather() {
         </form>
         </div>
         {weatherData ? (
-            <div className='data'>
-            <h3>{weatherData.name}</h3>
-            <p>Temperature: {weatherData.main.temp}°C</p>
-            <p>Description: {weatherData.weather[0].description}</p>
-            <p>Feels Like: {weatherData.main.feels_like}°C</p>
-            <p>Humidity: {weatherData.main.humidity}%</p>
-            <p>Wind Speed: {weatherData.wind.speed}m/s</p>
-        </div>
-        ) : (null)}
+            <WeatherDetail weatherData={weatherData}/>
+        ) : null}
     </div>
   )
 }
